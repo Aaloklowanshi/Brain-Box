@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import clsx from 'clsx'; // For conditional class names
+import tw from 'twin.macro'; 
 
 interface TypingTextProps {
   text: string;
@@ -26,8 +28,10 @@ const TypingText: React.FC<TypingTextProps> = ({ text }) => {
           style={{ display: 'inline-block', whiteSpace: 'nowrap' }}
         >
           {line}
+          {index === lines.length - 1 ? (
           <motion.span
-            className="animate-pulse"
+          key={`${index}-span`}
+            className={clsx('animate-pulse', tw`text-customOrange`)}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -39,6 +43,7 @@ const TypingText: React.FC<TypingTextProps> = ({ text }) => {
           >
             |
           </motion.span>
+          ) : null}
         </motion.p>
       ))}
     </>
