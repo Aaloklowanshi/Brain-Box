@@ -12,6 +12,7 @@ import TestimonialsSection from "./testimonialsection";
 import Footer from "./footersectoin";
 import TutorsSection from "./tutorssection";
 import WhatsAppIcon from "./whatsappicon";
+import KeyFeaturesSection from "./keyfeatures";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <Topbar />
       <HeroSection />
       <ServicesSection />
-      <TutorsSection />
+      {/* <KeyFeaturesSection/> */}
+      {/* <TutorsSection /> */}
       <TestimonialsSection />
       <ContactSection />
       <Footer />

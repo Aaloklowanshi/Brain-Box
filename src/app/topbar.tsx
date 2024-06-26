@@ -3,9 +3,9 @@ import Logo from "../assets/logo_brainbox-removebg-preview.png";
 import Image from "next/image";
 const Topbar: React.FC = () => {
   return (
-    <header className="ms-[5%] px-4 lg:px-6 h-14 mt-[2%] flex items-center">
+    <header className="ms-[1%] px-4 lg:px-6 h-14 mt-[2%] flex items-center">
       <a className="flex items-center justify-center" href="#">
-        <div style={{ width: "75%", height: "70%" }}>
+        <div style={{ width: "90%", height: "70%" }}>
           <Image
             src={Logo}
             alt="Hero"

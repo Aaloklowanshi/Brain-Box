@@ -16,8 +16,8 @@ const HeroSection: React.FC = () => {
               display: "inline-block",
               whiteSpace: "nowrap",
               overflow: "hidden",
-              lineHeight: "0.7", // Adjust line height to prevent cutting off
-              paddingBottom: "0.2em", // Adjust padding to prevent cutting off
+              lineHeight: "0.7",
+              paddingBottom: "0.2em",
             }}
           >
             {line.split("").map((letter, letterIndex) => (
@@ -42,8 +42,8 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="w-full py-8 md:py-16 lg:py-24 xl:py-20">
-      <div className="flex fle-row container w-[80%]  px-4 md:px-6">
-        <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
+      <div className="container mx-auto flex flex-row w-full px-4 md:px-6 lg:px-8">
+        <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px] w-full">
           <div className="space-y-4 animate__animated animate__fadeIn">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
               <motion.div
@@ -51,20 +51,16 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ repeat: Infinity, repeatType: "loop" }}
               >
-                <TypingText
-                  text={`Unlock Your Potential\nwith Expert Tutoring`}
-                />
+                <TypingText text={`Unlock Your Potential\nwith Brain Box`} />
               </motion.div>
             </h1>
-        
-            <p className="max-w-[600px]  text-gray-500 md:text-xl dark:text-gray-400">
+            <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
               Personalized tutoring services to help you excel in any subject.
               Our experienced tutors are dedicated to your academic success.
             </p>
-            
             <div className="flex flex-col gap-2 min-[400px]:flex-row animate__animated animate__fadeInUp">
               <a
-                className="inline-flex h-10 items-center justify-center rounded-md bg-customOrange  px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-customOrange px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                 href="#"
               >
                 Get Started
@@ -76,10 +72,9 @@ const HeroSection: React.FC = () => {
                 Learn More
               </a>
             </div>
-            
           </div>
-          <div className=" justify-center items-center rounded-xl object-cover object-center sm:w-full  lg:order-last animate__animated animate__fadeInRight">
-            <div style={{ width: '100%', height: '100%' }}>
+          <div className="flex justify-center items-center rounded-xl object-cover object-center sm:w-full lg:order-last animate__animated animate__fadeInRight">
+            <div style={{ width: '100%', height: '80%' }}>
               <Image
                 src={HeroImg}
                 alt="Hero"
@@ -89,7 +84,7 @@ const HeroSection: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </section>
