@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imageacad}
                 alt="Academic Tutoring"
@@ -59,7 +59,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imagetest}
                 alt="Test Prep"
@@ -82,7 +82,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imagelang}
                 alt="Language Learning"
