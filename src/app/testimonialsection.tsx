@@ -1,31 +1,112 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-const TestimonialsSection: React.FC = () => {
-  return (
-    
-    <section className="w-full py-12 md:py-24 lg:py-28  dark:bg-gray-800">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#22423A" fill-opacity="1" d="M0,96L60,122.7C120,149,240,203,360,213.3C480,224,600,192,720,176C840,160,960,160,1080,181.3C1200,203,1320,245,1380,266.7L1440,288L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center animate__animated animate__fadeIn">
-          <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">Testimonials</div>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-5xl">What Our Students Say</h2>
-            <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">Hear from our students and their success stories.</p>
-          </div>
-        </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-6 py-12 lg:grid-cols-2 lg:gap-12 animate__animated animate__fadeInUp">
-          <div className="grid gap-1">
-            <p className="text-gray-500 dark:text-gray-400">"I improved my math grades significantly with the help of my tutor. Highly recommend!"</p>
-            <h3 className="text-xl font-bold">- Sarah K.</h3>
-          </div>
-          <div className="grid gap-1">
-            <p className="text-gray-500 dark:text-gray-400">"The test prep sessions were very helpful and I scored higher than I expected on the SAT."</p>
-            <h3 className="text-xl font-bold">- Michael L.</h3>
-          </div>
+type Testimonial = {
+  name: string;
+  title: string;
+  company: string;
+  image: string;
+  rating: number;
+  text: string;
+};
+
+const testimonials: Testimonial[] = [
+  {
+    name: 'John Doe',
+    title: 'CEO',
+    company: 'Acme Inc.',
+    image: '/placeholder-user.jpg',
+    rating: 3,
+    text: 'The customer service I received was exceptional. The support team went above and beyond to address my concerns.'
+  },
+  {
+    name: 'Jane Smith',
+    title: 'Marketing Manager',
+    company: 'Globex Corp.',
+    image: '/placeholder-user.jpg',
+    rating: 4,
+    text: "I'm amazed by the quality of the products and the ease of use. It's been a game-changer for my business."
+  },
+  {
+    name: 'Michael Johnson',
+    title: 'Product Manager',
+    company: 'Stark Industries',
+    image: '/placeholder-user.jpg',
+    rating: 5,
+    text: 'This product exceeded my expectations. The build quality is excellent and the functionality is top-notch.'
+  }
+];
+
+const StarIcon = ({ filled }: { filled: boolean }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`w-4 h-4 ${filled ? 'fill-primary' : 'fill-muted stroke-muted-foreground'}`}
+  >
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, rating, text }) => (
+  <div className="rounded-lg bg-card p-6 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg">
+    <div className="flex items-start">
+      <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mr-4">
+        <img className="aspect-square h-full w-full" alt={name} src={image} />
+      </span>
+      <div>
+        <h3 className="text-lg font-semibold">{name}</h3>
+        <p className="text-sm text-muted-foreground">{title}, {company}</p>
+        <div className="flex items-center gap-0.5 mt-2">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <StarIcon key={i} filled={i < rating} />
+          ))}
         </div>
       </div>
-    </section>
-  );
-}
+    </div>
+    <blockquote className="mt-4 text-lg font-medium leading-relaxed">
+      {text}
+    </blockquote>
+  </div>
+);
 
-export default TestimonialsSection;
+const TestimonialSection: React.FC = () => (
+  <section className="bg-background py-12 md:py-20">
+    <div className="container mx-auto px-4 md:px-6 overflow-hidden relative">
+      <div className="mx-auto max-w-3xl text-center">
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Customers Say</h2>
+        <p className="mt-4 text-muted-foreground md:text-lg">
+          Hear from our satisfied customers about their experience with our products and services.
+        </p>
+      </div>
+      <div className="mt-12 flex space-x-6 animate-marquee">
+        {testimonials.concat(testimonials).map((testimonial, index) => (
+          <TestimonialCard key={index} {...testimonial} />
+        ))}
+      </div>
+    </div>
+    <style jsx>{`
+      @keyframes marquee {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-marquee {
+        display: flex;
+        width: calc(200% + 24px);
+        animation: marquee 30s linear infinite;
+      }
+    `}</style>
+  </section>
+);
+
+export default TestimonialSection;

@@ -20,18 +20,24 @@ const HeroSection: React.FC = () => {
               paddingBottom: "0.2em",
             }}
           >
-            {line.split("").map((letter, letterIndex) => (
-              <motion.span
-                key={letterIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                  duration: 0.05,
-                  delay: (lineIndex * line.length + letterIndex) * 0.05,
-                }}
-              >
-                {letter}
-              </motion.span>
+            {line.split(" ").map((word, wordIndex) => (
+              <React.Fragment key={wordIndex}>
+                {word.split("").map((letter, letterIndex) => (
+                  <motion.span
+                    key={letterIndex}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      duration: 0.05,
+                      delay: (lineIndex * line.length + wordIndex * word.length + letterIndex) * 0.05,
+                    }}
+                    style={word === "Brain" || word === "Box" ? { color: "#eab676" } : {}}
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+                {wordIndex < line.split(" ").length - 1 && " "}
+              </React.Fragment>
             ))}
             <br />
           </motion.div>
