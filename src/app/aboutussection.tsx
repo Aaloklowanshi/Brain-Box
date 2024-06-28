@@ -28,7 +28,7 @@ const AboutUsSection: React.FC = () => {
               />
             </span>
             <div className="ml-4 text-left">
-              <div className="text-lg font-bold text-gray-900">20K+</div>
+              <div className="text-lg font-bold text-gray-900">1K+</div>
               <div className="text-sm text-gray-600">Enrolled Learners</div>
             </div>
           </div>

@@ -19,9 +19,9 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-customDgreen dark:bg-gray-800">
+            {/* <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-customDgreen dark:bg-gray-800">
               Our Services
-            </div>
+            </div> */}
             <h2 className="text-3xl font-bold tracking-tighter text-[#1a202c] dark:text-gray-100 sm:text-4xl md:text-4xl">
               Tailored Tutoring for Your Success
             </h2>
