@@ -1,4 +1,6 @@
 import React from 'react';
+import Image1 from "../assets/man_4140048.png";
+import Image from "next/image";
 import { motion } from 'framer-motion';
 
 type Testimonial = {
@@ -12,20 +14,28 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: 'John Doe',
-    title: 'CEO',
-    company: 'Acme Inc.',
+    name: 'Jhon Doe',
+    title: 'ceo',
+    company: 'conic.co ',
     image: '/placeholder-user.jpg',
     rating: 3,
     text: 'The customer service I received was exceptional. The support team went above and beyond to address my concerns.'
   },
+  // {
+  //   name: 'Jane Smith',
+  //   title: 'Marketing Manager',
+  //   company: 'Globex Corp.',
+  //   image: '/placeholder-user.jpg',
+  //   rating: 4,
+  //   text: "I'm amazed by the quality of the products and the ease of use. It's been a game-changer for my business."
+  // },
   {
-    name: 'Jane Smith',
-    title: 'Marketing Manager',
-    company: 'Globex Corp.',
+    name: 'Abhishek Raghuwanshi',
+    title: 'student',
+    company: 'abc public',
     image: '/placeholder-user.jpg',
-    rating: 4,
-    text: "I'm amazed by the quality of the products and the ease of use. It's been a game-changer for my business."
+    rating: 5,
+    text: 'The services i got was amazing. I am 10th grad student and I was weak in maths now my git above 90%.Thank you'
   },
   {
     name: 'Michael Johnson',
@@ -34,7 +44,15 @@ const testimonials: Testimonial[] = [
     image: '/placeholder-user.jpg',
     rating: 5,
     text: 'This product exceeded my expectations. The build quality is excellent and the functionality is top-notch.'
-  }
+  },
+  {
+    name: 'Radhika Bandil',
+    title: 'student',
+    company: 'Emereld Heights ',
+    image: '/placeholder-user.jpg',
+    rating: 4,
+    text: 'I loved the doubt solving session , my doubt gets cleared as early as possible'
+  },
 ];
 
 const StarIcon = ({ filled }: { filled: boolean }) => (
@@ -54,13 +72,18 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
+
 const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, rating, text }) => (
   <div 
   id='Testimonial'
-  className="rounded-lg bg-card p-6 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg scroll-mt-14">
+  className="rounded-lg w-[50%]  bg-gray-100 p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl shadow-yellow-300 scroll-mt-14">
     <div className="flex items-start">
       <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mr-4">
-        <img className="aspect-square h-full w-full" alt={name} src={image} />
+        <Image 
+        className="aspect-square h-full w-full" 
+        alt={name}
+        src={Image1} 
+        />
       </span>
       <div>
         <h3 className="text-lg font-semibold">{name}</h3>

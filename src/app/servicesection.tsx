@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import Imagetest from "../assets/Online test.gif";
 import Imageacad from "../assets/Online learning-1.gif";
 import Imagelang from "../assets/Learning languages.gif";
+import Imagedoubt from "../assets/Service 24_7.gif";
+import Imagesession from "../assets/Live collaboration.gif";
+import Imagestudy from"../assets/Notes.gif";
 import Image from "next/image";
 
 const ServicesSection: React.FC = () => {
@@ -99,6 +102,72 @@ const ServicesSection: React.FC = () => {
             <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
               Learn a new language or improve your proficiency with our
               experienced tutors.
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex flex-col items-center gap-4 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
+          >
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
+              <Image
+                src={Imagedoubt}
+                alt="Language Learning"
+                width={100}
+                height={100}
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-[#1a202c]">24/7 Live Doubt session</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
+              Get your doubts ready , we have our 24/7 live doubt solving session with our experienced teachers.
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex flex-col items-center gap-4 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
+          >
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
+              <Image
+                src={Imagesession}
+                alt="Language Learning"
+                width={100}
+                height={100}
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-[#1a202c]">Interactive one-to-one sessions</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
+              we take care of each and every students by giving them personalised and interactive session.
+            </p>
+          </motion.div>
+          <motion.div
+            className="flex flex-col items-center gap-4 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
+          >
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
+              <Image
+                src={Imagestudy}
+                alt="Language Learning"
+                width={100}
+                height={100}
+                layout="responsive"
+                objectFit="cover"
+              />
+            </div>
+            <h3 className="text-xl font-bold text-[#1a202c]">Study Material</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
+              we have experienced tutors that help your students in their learning and providing notes and study material. 
             </p>
           </motion.div>
         </div>
