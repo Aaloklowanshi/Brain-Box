@@ -12,25 +12,33 @@ const Faqsection: React.FC = () => {
       <div className="container mx-auto max-w-4xl">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
+            <AccordionTrigger>How are the classes conducted ? </AccordionTrigger>
             <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
+            They are conducted one on one via zoom.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionTrigger>What is the duration of one class? </AccordionTrigger>
             <AccordionContent>
-              Yes. It comes with default styles that matches the other
-              components' aesthetic.
+            One class longs for around 50-60 minutes
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionTrigger> How are parents updated about the child? </AccordionTrigger>
             <AccordionContent>
-              Yes. It's animated by default, but you can disable it if you
-              prefer.
+            Monthly parent teacher meetings are done and we provide the success graph at the end of month. Daily class reports are shared to parents.
             </AccordionContent>
           </AccordionItem>
+          <AccordionItem value="item-4">
+            <AccordionTrigger>what if we are unable to attend a session?  </AccordionTrigger>
+            <AccordionContent>
+            if from either side from the tutor or from the student there is an unavoidable situation and the class has to be missed we can be flexible and reschedule it within the same week.            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-5">
+            <AccordionTrigger>what if my kid is unable to understand with the tutor?   </AccordionTrigger>
+            <AccordionContent>
+            although we make sure that our tutors are well trained but if still the kid and hence we provide first 2 sessions free so that the kid can make decisions and choose their tutor.  </AccordionContent>
+              </AccordionItem>
         </Accordion>
       </div>
     </div>

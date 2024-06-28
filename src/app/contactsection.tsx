@@ -1,12 +1,24 @@
+"use client";
+
 import React from "react";
 import Contact from "../assets/Mention (1).gif"
 import bg from "../assets/background.png"
 import Image from "next/image";
+import { sendEmail } from "@/actions/sendemail";
+import SubmitBtn from "./submit-btn";
+import toast from "react-hot-toast";
 
 
 const ContactSection: React.FC = () => {
+
+  // const { ref } = useSectionInView("Contact");
+
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-[#f3eada4d]">
+
+
+    <section 
+    id="contact"
+    className="w-full py-12 md:py-24 lg:py-32 bg-[#f3eada4d]">
       <div className="flex flex-row container px-4 md:px-6">
         <div className="flex flex-col w-[35%] items-center justify-center space-y-4 text-center animate__animated animate__fadeIn">
           <div className="space-y-4">
@@ -40,7 +52,19 @@ const ContactSection: React.FC = () => {
            backgroundPosition: 'center',
            backgroundRepeat: 'no-repeat'
          }}>
-          <form className="grid gap-4">
+          <form 
+          className="grid gap-4"
+          action={async (formData) => {
+            const { data, error } = await sendEmail(formData);
+  
+            if (error) {
+              toast.error(error);
+              return;
+            }
+  
+            toast.success("Email sent successfully!");
+          }}
+          >
             <div className="grid gap-1">
               <label htmlFor="name" className="text-sm font-medium">
                 Name
@@ -56,9 +80,12 @@ const ContactSection: React.FC = () => {
                 Email
               </label>
               <input
-                id="email"
-                type="email"
                 className="block w-full rounded-md bg-[#e3ebf9] border-gray-500 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                name = "senderEmail"
+                type="email"
+                required
+                maxLength={500}
+          placeholder="Your email"
               />
             </div>
             <div className="grid gap-1">
@@ -66,17 +93,15 @@ const ContactSection: React.FC = () => {
                 Message
               </label>
               <textarea
-                id="message"
+               name="message"
+               placeholder="Your message"
+               required
+               maxLength={5000}
                 rows={4}
                 className="block w-full rounded-md bg-[#e3ebf9] border-gray-500 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
-            >
-              Send Message
-            </button>
+            <SubmitBtn />
           </form>
         </div>
       </div>

@@ -55,7 +55,9 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
 );
 
 const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, rating, text }) => (
-  <div className="rounded-lg bg-card p-6 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg">
+  <div 
+  id='Testimonial'
+  className="rounded-lg bg-card p-6 shadow-sm transition-all duration-300 ease-in-out hover:shadow-lg scroll-mt-14">
     <div className="flex items-start">
       <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mr-4">
         <img className="aspect-square h-full w-full" alt={name} src={image} />

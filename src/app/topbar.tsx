@@ -27,7 +27,7 @@ const Topbar: React.FC = () => {
       <nav className="ml-auto flex gap-4 sm:gap-6">
         <a
           className="text-md font-semibold hover:underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-bold text-"
-          href="#"
+          href="#services"
         >
           Services
         </a>
@@ -39,13 +39,13 @@ const Topbar: React.FC = () => {
         </a>
         <a
           className="text-md font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out"
-          href="#"
+          href="#Testimonial"
         >
           Testimonials
         </a>
         <a
           className="text-md font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out"
-          href="#"
+          href="#contact"
         >
           Contact
         </a>
