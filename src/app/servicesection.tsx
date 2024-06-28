@@ -19,7 +19,7 @@ const ServicesSection: React.FC = () => {
             <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm text-customDgreen dark:bg-gray-800">
               Our Services
             </div>
-            <h2 className="text-3xl font-bold tracking-tighter text-gray-900 dark:text-gray-100 sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter text-[#1a202c] dark:text-gray-100 sm:text-4xl md:text-4xl">
               Tailored Tutoring for Your Success
             </h2>
             <p className="max-w-[900px] text-gray-500 dark:text-gray-400 md:text-lg lg:text-xl xl:text-lg">
@@ -36,7 +36,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imageacad}
                 alt="Academic Tutoring"
@@ -46,8 +46,8 @@ const ServicesSection: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="text-xl font-bold">Academic Tutoring</h3>
-            <p className="w-[70%] text-gray-500 dark:text-gray-400">
+            <h3 className="text-xl font-bold text-[#1a202c]">Academic Tutoring</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
               Get personalized support in core academic subjects like math,
               science, and English.
             </p>
@@ -59,7 +59,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imagetest}
                 alt="Test Prep"
@@ -69,8 +69,8 @@ const ServicesSection: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="text-xl font-bold">Test Prep</h3>
-            <p className="w-[70%] text-gray-500 dark:text-gray-400">
+            <h3 className="text-xl font-bold text-[#1a202c]">Test Prep</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
               Prepare for standardized tests like the SAT, ACT, and GRE with
               expert guidance.
             </p>
@@ -82,7 +82,7 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6, ease: "easeInOut" }}
           >
-            <div className="w-[70%] sm:w-[50%] md:w-[70%] lg:w-[70%] xl:w-[70%]">
+            <div className="w-[70%] sm:w-[50%] md:w-[90%] lg:w-[90%] xl:w-[90%]">
               <Image
                 src={Imagelang}
                 alt="Language Learning"
@@ -92,8 +92,8 @@ const ServicesSection: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-            <h3 className="text-xl font-bold">Language Learning</h3>
-            <p className="w-[70%] text-gray-500 dark:text-gray-400">
+            <h3 className="text-xl font-bold text-[#1a202c]">Language Learning</h3>
+            <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
               Learn a new language or improve your proficiency with our
               experienced tutors.
             </p>

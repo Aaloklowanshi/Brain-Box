@@ -11,6 +11,7 @@ import Footer from "./footersectoin";
 import TutorsSection from "./tutorssection";
 import WhatsAppIcon from "./whatsappicon";
 import  Faqsection  from "./faqsection";
+import ExtraSection from "./extrasection";
 
 export default function Home() {
   return (
@@ -20,7 +21,9 @@ export default function Home() {
       <ServicesSection />
       {/* <KeyFeaturesSection/> */}
       <TutorsSection />
+      <ExtraSection/>
       <TestimonialsSection />
+
       <ContactSection />
       <Faqsection/>
       <Footer />
