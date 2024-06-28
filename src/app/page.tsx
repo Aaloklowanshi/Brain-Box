@@ -12,12 +12,16 @@ import TutorsSection from "./tutorssection";
 import WhatsAppIcon from "./whatsappicon";
 import  Faqsection  from "./faqsection";
 import ExtraSection from "./extrasection";
+import CourseSection from "./coursesection";
+import AboutUsSection from "./aboutussection";
 
 export default function Home() {
   return (
     <>
       <Topbar />
       <HeroSection />
+      <AboutUsSection/>
+      <CourseSection/>
       <ServicesSection />
       {/* <KeyFeaturesSection/> */}
       {/* <TutorsSection /> */}

@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
               display: "inline-block",
               whiteSpace: "nowrap",
               overflow: "hidden",
-              lineHeight: "0.7",
+              lineHeight: "0.8",
               paddingBottom: "0.2em",
             }}
           >
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
                       duration: 0.05,
                       delay: (lineIndex * line.length + wordIndex * word.length + letterIndex) * 0.05,
                     }}
-                    style={word === "Brain" || word === "Box" ? { color: "#eab676" } : {}}
+                    style={word === "Brain" || word === "Box" ? { color: "#ff6347" } : {}}
                   >
                     {letter}
                   </motion.span>
@@ -61,20 +61,20 @@ const HeroSection: React.FC = () => {
               </motion.div>
             </h1>
             
-            <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+            <p className="max-w-[600px] text-[#4a5568] md:text-md font-medium dark:text-gray-400">
               Personalized tutoring services to help you excel in any subject.
               Our experienced tutors are dedicated to your academic success.
             </p>
             <br></br>
             <div className="flex  flex-col gap-2 min-[400px]:flex-row animate__animated animate__fadeInUp">
               <a
-                className="inline-flex h-10 items-center justify-center rounded-md bg-customOrange px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-customOrange px-8 text-sm font-medium bg-[#ff6347] text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
                 href="#"
               >
                 Get Started
               </a>
               <a
-                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
+                className="inline-flex h-10 items-center justify-center rounded-md border border-gray-300 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
                 href="#"
               >
                 Learn More
