@@ -50,6 +50,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Academic Tutoring</h3>
@@ -73,6 +74,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Test Prep</h3>
@@ -96,6 +98,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Language Learning</h3>
@@ -119,6 +122,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized 
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">24/7 Live Doubt session</h3>
@@ -141,6 +145,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Interactive one-to-one sessions</h3>
@@ -163,6 +168,7 @@ const ServicesSection: React.FC = () => {
                 height={100}
                 layout="responsive"
                 objectFit="cover"
+                unoptimized
               />
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Study Material</h3>
