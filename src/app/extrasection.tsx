@@ -25,13 +25,13 @@ const ExtraSection: React.FC = () => {
           return { opacity: 0 };
       }
     },
-    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1.5 } },
   };
 
   const directions = ["left", "right", "up", "down", "left", "right"];
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.7,  // Increase threshold to trigger animation later
   });
 
   return (
