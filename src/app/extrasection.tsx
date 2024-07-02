@@ -77,7 +77,7 @@ const ExtraSection: React.FC = () => {
                   {index === 5 && "Student's Results"}
                 </h2>
                 <p className="text-[#4a5568] text-sm mt-2">
-                  {index === 0 && "We offer online classes for students in school &amp; college."}
+                  {index === 0 && "We offer online classes for students in school college."}
                   {index === 1 && "Just choose your subject/course &amp; take a free trial class."}
                   {index === 2 && "Find teachers who will teach you in your mother tongue."}
                   {index === 3 && "Coding, Foreign languages, Dance, Music. Take online classes for all."}

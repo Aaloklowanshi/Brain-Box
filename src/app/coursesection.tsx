@@ -30,11 +30,11 @@ const CoursesSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const courses: Course[] = [
-    { id: 1, title: "Basic to advance", subtitle: "Science", description: "Learn a foreign language by online native teacher and increase your employability.", color: "yellow", subjects: ["Physics", "Chemistry", "Biology"] },
-    { id: 2, title: "Basics to Advance", subtitle: "Mathematics", description: "Learn from best teachers from home at anytime at affordable prices.", color: "orange", subjects: ["School Level Math", "AMC Math", "SAT Math"] },
+    { id: 1, title: "Basic to advance", subtitle: "Science", description: "Dive deep into the fascinating world of earth science. Through hands-on experiments and interactive lessons.", color: "yellow", subjects: ["Physics", "Chemistry", "Biology"] },
+    { id: 2, title: "Basics to Advance", subtitle: "Mathematics", description: "Improve your math skills with personalized online tutoring.", color: "orange", subjects: ["School Level Math", "AMC Math", "SAT Math"] },
     { id: 3, title: "Basic to advance", subtitle: "Coding / Programming", description: "Find the best tutor for coding and programming classes at affordable prices.", color: "green", subjects: ["JavaScript", "Python", "Java"] },
-    { id: 4, title: "Basic to advance", subtitle: "English", description: "Get online interactive extra curricular classes with best trainer.", color: "blue", subjects: ["School English", "SAT English"] },
-    { id: 5, title: "Basic to advance", subtitle: "10th to 12th Grade", description: "Improve your math skills with personalized online tutoring.", color: "purple", subjects: ["SAT Exam", "AMT Exam", "Olampiad Exam"] },
+    { id: 4, title: "Basic to advance", subtitle: "English", description: "English courses offer an enriching and comprehensive journey into the world of literature, language, and communication. ", color: "blue", subjects: ["School English", "SAT English"] },
+    { id: 5, title: "Basic to advance", subtitle: "10th to 12th Grade", description: "Our 10th and 12th-grade science courses offer an in-depth and engaging journey into the fascinating realms of subjects", color: "purple", subjects: ["SAT Exam", "AMT Exam", "Olampiad Exam"] },
   ];
 
   const colorClasses: { [key in Color]: { bg: string; text: string; button: string; dot: string } } = {

@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
+// import Image from "next/image";
+
 const AboutUsSection: React.FC = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger animation only once
@@ -39,10 +41,10 @@ const AboutUsSection: React.FC = () => {
                 objectFit="cover"
               />
             </div>
-            <div className="ml-4 text-left">
+            {/* <div className="ml-4 text-left">
               <div className="text-lg font-bold text-gray-900">1K+</div>
               <div className="text-sm text-gray-600">Enrolled Learners</div>
-            </div>
+            </div>  */}
           </div>
         </motion.div>
         <motion.div
@@ -53,11 +55,14 @@ const AboutUsSection: React.FC = () => {
         >
           <h2 className="mb-2 text-sm font-semibold text-gray-600">ABOUT US</h2>
           <h1 className="mb-4 text-3xl font-bold text-gray-900">
-            India&apos;s best <span className="text-green-500 underline">online tuition</span> website for quality education
+           Brain Box{" "}
+            <span className="text-green-500 underline">online tuition</span>{" "}
+            website for quality education
           </h1>
           <p className="mb-6 text-gray-700">
-            We are committed to providing personalised online classes that cater to the unique learning needs of each
-            student.
+            BRAIN BOX is a platform dedicated to inspiring a love for learning
+            in students. Our team consists of outstanding educators who serve as
+            not only tutors but also mentors and friends.
           </p>
           <ul className="space-y-2">
             <li className="flex items-center text-lg text-gray-900">
