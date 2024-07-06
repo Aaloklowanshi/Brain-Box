@@ -14,44 +14,46 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: 'Jhon Doe',
-    title: 'ceo',
-    company: 'conic.co ',
+    name: 'Aryan',
+    title: 'student',
+    company: 'Florida ',
     image: '/placeholder-user.jpg',
     rating: 3,
-    text: 'The customer service I received was exceptional. The support team went above and beyond to address my concerns.'
+    text: 'Helped me increase my SAT score from 1100 to 1550. Increased my chances of selection. '
   },
-  // {
-  //   name: 'Jane Smith',
-  //   title: 'Marketing Manager',
-  //   company: 'Globex Corp.',
-  //   image: '/placeholder-user.jpg',
-  //   rating: 4,
-  //   text: "I'm amazed by the quality of the products and the ease of use. It's been a game-changer for my business."
-  // },
   {
-    name: 'Abhishek Raghuwanshi',
+    name: 'Shyan',
     title: 'student',
-    company: 'abc public',
-    image: '/placeholder-user.jpg',
-    rating: 5,
-    text: 'The services i got was amazing. I am 10th grad student and I was weak in maths now my git above 90%.Thank you'
-  },
-  {
-    name: 'Michael Johnson',
-    title: 'Product Manager',
-    company: 'Stark Industries',
-    image: '/placeholder-user.jpg',
-    rating: 5,
-    text: 'This product exceeded my expectations. The build quality is excellent and the functionality is top-notch.'
-  },
-  {
-    name: 'Radhika Bandil',
-    title: 'student',
-    company: 'Emereld Heights ',
+    company: 'california US',
     image: '/placeholder-user.jpg',
     rating: 4,
-    text: 'I loved the doubt solving session , my doubt gets cleared as early as possible'
+    text: 'Helped me to score 4/5 points in my AP BIOLOGY exam ! I was truely helped and started to love biology even more !!'
+  },
+  {
+    name: 'Ananya',
+    title: 'student',
+    company: 'US',
+    image: '/placeholder-user.jpg',
+    rating: 5,
+    text: 'Classes felt like home, comforting and the best always '
+  },
+  {
+    name: 'Zyan',
+    title: 'student',
+    company: 'New York',
+    image: '/placeholder-user.jpg',
+    rating: 5,
+    text: ' started to love math when I started learning with him.' 
+
+
+  },
+  {
+    name: 'Mayank ',
+    title: 'student',
+    company: 'North Carolina, US',
+    image: '/placeholder-user.jpg',
+    rating: 4,
+    text:'My science base was really weak and now I can finally say my science is strong to the core thanks to her for the extra efforts in helping me clear my basics.'
   },
 ];
 
@@ -76,7 +78,7 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
 const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, rating, text }) => (
   <div 
   id='Testimonial'
-  className="rounded-lg w-[50%]  bg-slate-100 p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl shadow-yellow-300 scroll-mt-14">
+  className="rounded-lg w-[50%] bg-slate-100 p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl shadow-yellow-300 scroll-mt-14">
     
     <div className="flex items-start">
       <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mr-4">
@@ -96,14 +98,14 @@ const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, r
         </div>
       </div>
     </div>
-    <blockquote className="mt-4 text-lg font-medium leading-relaxed">
+    <blockquote className="mt-4 text-sm leading-relaxed">
       {text}
     </blockquote>
   </div>
 );
 
 const TestimonialSection: React.FC = () => (
-  <section className="bg-background py-12 md:py-20">
+  <section className="bg-background py-12 md:py-20 ">
     <div className="container mx-auto px-4 md:px-6 overflow-hidden relative">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Customers Say</h2>
@@ -111,7 +113,7 @@ const TestimonialSection: React.FC = () => (
           Hear from our satisfied customers about their experience with our products and services.
         </p>
       </div>
-      <div className="mt-12 flex space-x-6 animate-marquee">
+      <div className="mt-12  flex space-x-6 animate-marquee">
         {testimonials.concat(testimonials).map((testimonial, index) => (
           <TestimonialCard key={index} {...testimonial} />
         ))}

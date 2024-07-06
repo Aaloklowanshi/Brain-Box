@@ -1,7 +1,10 @@
 import React from "react";
 import Image1 from "../assets/user_9793970.png";
 import Image2 from "../assets/little-girl-with-laptop-plays-games-concept-game-addiction.jpg";
-import Image from 'next/image';
+import Image3 from "../assets/target_3233474.png"
+import Image4 from "../assets/vision_16894350.png"
+import Image from "next/image";
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -35,12 +38,15 @@ const AboutUsSection: React.FC = () => {
             />
           </div>
           <div className="absolute bottom-0 left-0 flex items-center p-4 bg-white rounded-lg shadow-lg translate-y-1/2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full">
+            <div className="relative w-10 h-10 overflow-hidden">
               <Image
                 src={Image1}
                 alt="User"
-                layout="fill"
-                objectFit="cover"
+                className="aspect-square  h-full w-full"
+                width={40}
+                height={40}
+                // layout="fill"
+                // objectFit="cover"
               />
             </div>
             {/* <div className="ml-4 text-left">
@@ -57,7 +63,7 @@ const AboutUsSection: React.FC = () => {
         >
           <h2 className="mb-2 text-sm font-semibold text-gray-600">ABOUT US</h2>
           <h1 className="mb-4 text-3xl font-bold text-gray-900">
-           Brain Box{" "}
+            Brain Box{" "}
             <span className="text-green-500 underline">online tuition</span>{" "}
             website for quality education
           </h1>
@@ -120,6 +126,48 @@ const AboutUsSection: React.FC = () => {
             </li>
           </ul>
         </motion.div>
+      </div>
+      <br></br>
+      <br></br>
+      <div className="flex gap-6 w-[80%]">
+        <div className="bg-slate-100  shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 hover:border-yellow-400">
+          <h5 className="font-bold text-lg mb-2 flex items-center">
+            Our Mission
+            <Image
+              src={Image3}
+              alt="Mission Image"
+              width={50} 
+              height={50}
+              className="ml-2 shadow:sm"
+            />
+          </h5>
+          <p>
+            To provide live one-to-one online tutoring class is to provide
+            personalized, interactive education tailored to each student's
+            unique needs, fostering a deep understanding of subjects, enhancing
+            academic performance, and building confidence through real-time
+            feedback and guidance from expert tutors.
+          </p>
+        </div>
+        <div className=" bg-slate-100 shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 border-blue-400">
+          <h5 className="flex items-center font-bold text-lg mb-2">Our Vision
+          <Image
+              src={Image4}
+              alt="Mission Image"
+              width={50}
+              height={50}
+              className="ml-2 shadow:sm"
+            />
+          </h5>
+          <p>
+            Our vision of one-to-one live tutoring class is to revolutionize
+            education by making high-quality, individualized learning accessible
+            to all students, empowering them to reach their full potential,
+            cultivate a lifelong love of learning, and achieve academic and
+            personal success in a supportive, engaging, and flexible
+            environment.
+          </p>
+        </div>
       </div>
     </div>
   );
