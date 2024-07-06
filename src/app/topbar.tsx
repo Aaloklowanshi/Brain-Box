@@ -10,7 +10,7 @@ const Topbar: React.FC = () => {
   };
 
   return (
-    <header className="ms-[1%] px-4 lg:px-6 h-14 mt-[2%] flex items-center bg-slate-100">
+    <header className="ms-[1%] px-4 lg:px-6 h-14 mt-[2%] flex items-center">
       <a className="flex items-center" href="#">
         <div className="mt-[2%] w-[90%] sm:w-[90%] h-[70%] md:w-[90%] lg:w-[90%]">
           <Image

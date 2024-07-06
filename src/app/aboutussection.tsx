@@ -36,15 +36,15 @@ const AboutUsSection: React.FC = () => {
             />
           </div>
           <div className="absolute bottom-0 left-0 flex items-center p-4 bg-white rounded-lg shadow-lg translate-y-1/2">
-            <div className="relative w-10 h-10 overflow-hidden rounded-full">
+            <div className="relative w-10 h-10 overflow-hidden">
               <Image
                 src={Image1}
                 alt="User"
                 className="aspect-square  h-full w-full"
                 width={40}
                 height={40}
-                layout="fill"
-                objectFit="cover"
+                // layout="fill"
+                // objectFit="cover"
               />
             </div>
             {/* <div className="ml-4 text-left">
@@ -128,7 +128,7 @@ const AboutUsSection: React.FC = () => {
       <br></br>
       <br></br>
       <div className="flex gap-6 w-[80%]">
-        <div className="bg-slate-100 rounded-sm shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 hover:border-yellow-400">
+        <div className="bg-slate-100  shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 hover:border-yellow-400">
           <h5 className="font-bold text-lg mb-2 flex items-center">
             Our Mission
             <Image
@@ -147,7 +147,7 @@ const AboutUsSection: React.FC = () => {
             feedback and guidance from expert tutors.
           </p>
         </div>
-        <div className=" bg-slate-100 rounded-sm  shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 border-blue-400">
+        <div className=" bg-slate-100 shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 border-blue-400">
           <h5 className="flex items-center font-bold text-lg mb-2">Our Vision
           <Image
               src={Image4}
