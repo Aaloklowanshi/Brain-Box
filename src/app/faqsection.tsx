@@ -19,7 +19,7 @@ const Faqsection: React.FC = () => {
               How are the classes conducted?
             </AccordionTrigger>
             <AccordionContent className="text-xl text-gray-700 dark:text-gray-300">
-              Our classes are conducted one-on-one via Zoom, ensuring personalized attention and a tailored learning experience.
+              Our classes are conducted one-on-one via Google Meet, ensuring personalized attention and a tailored learning experience.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
@@ -53,6 +53,13 @@ const Faqsection: React.FC = () => {
             <AccordionContent className="text-xl text-gray-700 dark:text-gray-300">
               We ensure our tutors are well-trained, but if your child faces difficulties, we offer the first two sessions for free, allowing your child to make an informed decision and choose their tutor.
             </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-6">
+            <AccordionTrigger className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+            What is the per session fee ? 
+            </AccordionTrigger>
+            <AccordionContent className="text-xl text-gray-700 dark:text-gray-300">
+            The fees depends on the grade and course of the subject you can contact on WhatsApp to get exact details of per session for your kid.            </AccordionContent>
           </AccordionItem>
         </Accordion>
       </div>
