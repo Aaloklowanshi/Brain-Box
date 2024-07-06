@@ -1,40 +1,70 @@
 import React from "react";
 import Image1 from "../assets/user_9793970.png";
 import Image2 from "../assets/little-girl-with-laptop-plays-games-concept-game-addiction.jpg";
+<<<<<<< HEAD
 import Image3 from "../assets/target_3233474.png"
 import Image4 from "../assets/vision_16894350.png"
 import Image from "next/image";
+=======
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+// import Image from "next/image";
+>>>>>>> bc08cd1c6c17bff5e5d9bacf9f6ae291f9e86bf8
 
 const AboutUsSection: React.FC = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.5, // Trigger animation when half of the element is in view
+  });
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
       <div className="grid items-center w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2">
-        <div className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-lg">
-          <Image
-            src={Image2}
-            alt="Student"
-            className="w-full h-auto rounded-lg"
-            width={400}
-            height={300}
-            style={{ aspectRatio: "400 / 300", objectFit: "cover" }}
-          />
+        <motion.div
+          ref={ref}
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: inView ? 0 : -100, opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1 }}
+          className="relative flex items-center justify-center p-4 bg-white rounded-lg shadow-lg"
+        >
+          <div className="relative w-[400px] h-[300px]">
+            <Image
+              src={Image2}
+              alt="Student"
+              className="rounded-lg"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
           <div className="absolute bottom-0 left-0 flex items-center p-4 bg-white rounded-lg shadow-lg translate-y-1/2">
-            <span className="relative flex h-10 w-10 shrink-0 overflow-hidden ">
+            <div className="relative w-10 h-10 overflow-hidden rounded-full">
               <Image
                 src={Image1}
                 alt="User"
+<<<<<<< HEAD
                 className="aspect-square  h-full w-full"
                 width={40}
                 height={40}
+=======
+                layout="fill"
+                objectFit="cover"
+>>>>>>> bc08cd1c6c17bff5e5d9bacf9f6ae291f9e86bf8
               />
-            </span>
+            </div>
             {/* <div className="ml-4 text-left">
-              <div className="text-lg font-bold text-gray-900">20K+</div>
+              <div className="text-lg font-bold text-gray-900">1K+</div>
               <div className="text-sm text-gray-600">Enrolled Learners</div>
-            </div> */}
+            </div>  */}
           </div>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: inView ? 0 : 100, opacity: inView ? 1 : 0 }}
+          transition={{ duration: 1 }}
+          className="transform transition-transform duration-1000"
+        >
           <h2 className="mb-2 text-sm font-semibold text-gray-600">ABOUT US</h2>
           <h1 className="mb-4 text-3xl font-bold text-gray-900">
             Brain Box{" "}
@@ -99,7 +129,7 @@ const AboutUsSection: React.FC = () => {
               <span className="ml-2">Flexible Timings</span>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
       <br></br>
       <br></br>

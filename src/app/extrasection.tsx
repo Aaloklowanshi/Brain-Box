@@ -25,17 +25,22 @@ const ExtraSection: React.FC = () => {
           return { opacity: 0 };
       }
     },
-    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1 } },
+    visible: { opacity: 1, x: 0, y: 0, transition: { duration: 1.5 } },
   };
 
   const directions = ["left", "right", "up", "down", "left", "right"];
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.1, // Lower threshold to trigger animation earlier
   });
 
+  console.log("Section in view:", inView); // Debug log
+
   return (
-    <section className="bg-[#f3eada4d] w-full py-12 md:py-24 lg:py-34 dark:bg-gray-800" ref={ref}>
+    <section
+      className="bg-[#f3eada4d] w-full py-12 md:py-24 lg:py-34 dark:bg-gray-800"
+      ref={ref}
+    >
       <div className="flex flex-col md:flex-row items-center justify-center min-h-screen w-[90%] mx-auto">
         <div className="w-full md:w-1/4 mx-auto text-left mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-[#1a202c]">
@@ -64,9 +69,9 @@ const ExtraSection: React.FC = () => {
                   src={image}
                   alt={`Image ${index + 1}`}
                   className="w-16 h-16 mb-4"
-                  width="60"
-                  height="60"
-                  style={{ aspectRatio: "60 / 60", objectFit: "cover" }}
+                  width={60}
+                  height={60}
+                  style={{ objectFit: "cover" }}
                 />
                 <h2 className="text-lg font-semibold text-[#234e43]">
                   {index === 0 && "Classes for School"}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 type Color = 'yellow' | 'orange' | 'green' | 'blue' | 'purple';
 
@@ -10,6 +11,20 @@ interface Course {
   color: Color;
   subjects: string[];
 }
+
+const fadeInAnimationVariants = {
+  initial: {
+    opacity: 0,
+    y: 100,
+  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
+};
 
 const CoursesSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -61,12 +76,17 @@ const CoursesSection: React.FC = () => {
         Discover Available <span className="text-orange-500">Courses</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {courses.map((course) => (
-          <div
+        {courses.map((course, index) => (
+          <motion.div
             key={course.id}
             className={`p-6 ${colorClasses[course.color].bg} rounded-lg relative`}
             onMouseEnter={() => setHoveredCard(course.id)}
             onMouseLeave={() => setHoveredCard(null)}
+            variants={fadeInAnimationVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={index}
           >
             <div className="relative z-10">
               <h2 className={`text-lg font-semibold ${colorClasses[course.color].text}`}>{course.title}</h2>
@@ -80,7 +100,12 @@ const CoursesSection: React.FC = () => {
               ))}
             </div>
             {hoveredCard === course.id && (
-              <div className={`flex flex-col absolute inset-0 items-center justify-center ${colorClasses[course.color].bg} bg-opacity-100 p-6 rounded-lg shadow-lg z-20`}>
+              <motion.div
+                className={`flex flex-col absolute inset-0 items-center justify-center ${colorClasses[course.color].bg} bg-opacity-100 p-6 rounded-lg shadow-lg z-20`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
                 <h2 className={`text-2xl font-bold mb-2 ${colorClasses[course.color].text}`}>We Prepare You For</h2>
                 <br />
                 <ul className="w-full">
@@ -88,9 +113,9 @@ const CoursesSection: React.FC = () => {
                     <li key={index} className="text-md font-medium text-gray-800 border-b border-gray-300 py-1">{subject}</li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

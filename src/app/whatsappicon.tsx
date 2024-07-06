@@ -5,7 +5,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppIcon: React.FC = () => {
   const handleWhatsAppClick = () => {
-    window.location.href = 'https://chat.whatsapp.com/YOUR_CHAT_LINK'; // Replace with your WhatsApp chat link
+    window.location.href = 'https://wa.me/9302323000'; // Replace with your WhatsApp chat link
   };
 
   return (
