@@ -1,17 +1,14 @@
 import React from "react";
 import Image1 from "../assets/user_9793970.png";
 import Image2 from "../assets/little-girl-with-laptop-plays-games-concept-game-addiction.jpg";
-<<<<<<< HEAD
 import Image3 from "../assets/target_3233474.png"
 import Image4 from "../assets/vision_16894350.png"
 import Image from "next/image";
-=======
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 // import Image from "next/image";
->>>>>>> bc08cd1c6c17bff5e5d9bacf9f6ae291f9e86bf8
 
 const AboutUsSection: React.FC = () => {
   const { ref, inView } = useInView({
@@ -43,14 +40,11 @@ const AboutUsSection: React.FC = () => {
               <Image
                 src={Image1}
                 alt="User"
-<<<<<<< HEAD
                 className="aspect-square  h-full w-full"
                 width={40}
                 height={40}
-=======
                 layout="fill"
                 objectFit="cover"
->>>>>>> bc08cd1c6c17bff5e5d9bacf9f6ae291f9e86bf8
               />
             </div>
             {/* <div className="ml-4 text-left">
