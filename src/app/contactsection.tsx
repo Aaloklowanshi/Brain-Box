@@ -18,9 +18,9 @@ const ContactSection: React.FC = () => {
     <section 
     id="contact"
     className="w-full py-12 md:py-24 lg:py-32 bg-slate-50">
-      <div className="py-[2%] bg-[#ff6347f4]">
+      {/* <div className="py-[2%] bg-[#ff6347f4]">
        <h2 className="text-xl text-white font-semibold text-left sm:text-3xl ms-[3%] md:text-3xl">Subscribe now to make learning easy and smart!</h2>
-</div>
+</div> */}
       <div className="flex flex-col justify-center items-center  container px-4 sm:flex-row  md:px-6  ">
         <div className="flex flex-col w-[35%] items-center justify-center space-y-4 text-center animate__animated animate__fadeIn">
           <div className="space-y-4">

@@ -82,9 +82,9 @@ const Topbar: React.FC = () => {
           </a>
           <a
             className="text-md font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out p-2"
-            href="#"
+            href="#about"
           >
-            Tutors
+            AboutUs
           </a>
           <a
             className="text-md font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out p-2"

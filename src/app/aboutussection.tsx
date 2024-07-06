@@ -14,7 +14,9 @@ const AboutUsSection: React.FC = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
+    <div 
+    id="about"
+    className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
       <div className="grid items-center w-full max-w-6xl grid-cols-1 gap-8 md:grid-cols-2">
         <motion.div
           ref={ref}

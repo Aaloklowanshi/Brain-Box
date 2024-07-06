@@ -31,7 +31,7 @@ const ExtraSection: React.FC = () => {
   const directions = ["left", "right", "up", "down", "left", "right"];
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1, // Lower threshold to trigger animation earlier
+    threshold: 0.1, 
   });
 
   console.log("Section in view:", inView); // Debug log
