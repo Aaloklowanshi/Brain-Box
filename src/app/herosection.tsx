@@ -47,8 +47,8 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full py-8 md:py-16 lg:py-24 xl:py-20">
-      <div className="container mx-auto flex flex-row w-full px-4 md:px-6 lg:px-8">
+<section className="w-full py-8 md:py-16 lg:py-24 xl:pb-8 xl:pt-20">
+<div className="container mx-auto flex flex-row w-full px-4 md:px-6 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px] w-full">
           <div className="space-y-4 animate__animated animate__fadeIn">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
