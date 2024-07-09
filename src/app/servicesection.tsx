@@ -79,7 +79,7 @@ const ServicesSection: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-[#1a202c]">Test Prep</h3>
             <p className="w-[70%] text-[#4a5568] dark:text-gray-400">
-              Prepare for standardized tests like the SAT, ACT, and GRE with
+              Prepare for standardized tests like the SAT and AMC with
               expert guidance.
             </p>
           </motion.div>
