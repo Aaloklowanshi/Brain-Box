@@ -2,6 +2,8 @@ import React from 'react';
 import Image1 from "../assets/man_4140048.png";
 import Image from "next/image";
 import { motion } from 'framer-motion';
+import { FaUserCircle } from 'react-icons/fa';
+
 
 type Testimonial = {
   name: string;
@@ -16,44 +18,42 @@ const testimonials: Testimonial[] = [
   {
     name: 'Aryan',
     title: 'student',
-    company: 'Florida ',
-    image: '/placeholder-user.jpg',
+    company: 'Florida',
+    image: "FaUserCircle",
     rating: 3,
-    text: 'Helped me increase my SAT score from 1100 to 1550. Increased my chances of selection. '
+    text: 'Helped me increase my SAT score from 1100 to 1550. Increased my chances of selection.'
   },
   {
     name: 'Shyan',
     title: 'student',
-    company: 'california US',
-    image: '/placeholder-user.jpg',
+    company: 'California, US',
+    image: "FaUserCircle",
     rating: 4,
-    text: 'Helped me to score 4/5 points in my AP BIOLOGY exam ! I was truely helped and started to love biology even more !!'
+    text: 'Helped me to score 4/5 points in my AP BIOLOGY exam! I was truly helped and started to love biology even more!'
   },
   {
     name: 'Ananya',
     title: 'student',
     company: 'US',
-    image: '/placeholder-user.jpg',
+    image: "FaUserCircle",
     rating: 5,
-    text: 'Classes felt like home, comforting and the best always '
+    text: 'Classes felt like home, comforting and the best always.'
   },
   {
     name: 'Zyan',
     title: 'student',
     company: 'New York',
-    image: '/placeholder-user.jpg',
+    image: "FaUserCircle",
     rating: 5,
-    text: ' started to love math when I started learning with him.' 
-
-
+    text: 'Started to love math when I started learning with him.'
   },
   {
-    name: 'Mayank ',
+    name: 'Mayank',
     title: 'student',
     company: 'North Carolina, US',
-    image: '/placeholder-user.jpg',
+    image: "FaUserCircle",
     rating: 4,
-    text:'My science base was really weak and now I can finally say my science is strong to the core thanks to her for the extra efforts in helping me clear my basics.'
+    text: 'My science base was really weak and now I can finally say my science is strong to the core thanks to her for the extra efforts in helping me clear my basics.'
   },
 ];
 
@@ -74,19 +74,23 @@ const StarIcon = ({ filled }: { filled: boolean }) => (
   </svg>
 );
 
-
 const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, rating, text }) => (
-  <div 
-  id='Testimonial'
-  className="rounded-lg w-[50%] bg-slate-100 p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl shadow-yellow-300 scroll-mt-14">
-    
+  <div
+    id='Testimonial'
+    className="rounded-lg w-[50%] bg-slate-100 p-6 shadow-md transition-all duration-300 ease-in-out hover:shadow-xl shadow-yellow-300 scroll-mt-14">
     <div className="flex items-start">
       <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full mr-4">
-        <Image 
-        className="aspect-square h-full w-full" 
-        alt={name}
-        src={Image1} 
-        />
+        {image === "FaUserCircle" ? (
+          <FaUserCircle className="h-full w-full text-gray-500" />
+        ) : (
+          <Image
+            className="aspect-square h-full w-full"
+            alt={name}
+            src={image}
+            width={40}
+            height={40}
+          />
+        )}
       </span>
       <div>
         <h3 className="text-lg font-semibold">{name}</h3>
@@ -105,7 +109,7 @@ const TestimonialCard: React.FC<Testimonial> = ({ name, title, company, image, r
 );
 
 const TestimonialSection: React.FC = () => (
-  <section className="bg-background py-12 md:py-20 ">
+  <section className="bg-background py-12 md:py-20">
     <div className="container mx-auto px-4 md:px-6 overflow-hidden relative">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">What Our Customers Say</h2>
@@ -113,7 +117,7 @@ const TestimonialSection: React.FC = () => (
           Hear from our satisfied customers about their experience with our products and services.
         </p>
       </div>
-      <div className="mt-12  flex space-x-6 animate-marquee">
+      <div className="mt-12 flex space-x-6 animate-marquee">
         {testimonials.concat(testimonials).map((testimonial, index) => (
           <TestimonialCard key={index} {...testimonial} />
         ))}

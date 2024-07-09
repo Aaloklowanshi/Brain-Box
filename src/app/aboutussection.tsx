@@ -1,19 +1,16 @@
 import React from "react";
 import Image1 from "../assets/user_9793970.png";
 import Image2 from "../assets/little-girl-with-laptop-plays-games-concept-game-addiction.jpg";
-import Image3 from "../assets/target_3233474.png"
-import Image4 from "../assets/vision_16894350.png"
+import Image3 from "../assets/target_3233474.png";
+import Image4 from "../assets/vision_16894350.png";
 import Image from "next/image";
-// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-// import Image from "next/image";
-
 const AboutUsSection: React.FC = () => {
   const { ref, inView } = useInView({
-    triggerOnce: true, // Trigger animation only once
-    threshold: 0.5, // Trigger animation when half of the element is in view
+    triggerOnce: true,
+    threshold: 0.5,
   });
 
   return (
@@ -45,14 +42,8 @@ const AboutUsSection: React.FC = () => {
                 className="aspect-square  h-full w-full"
                 width={40}
                 height={40}
-                // layout="fill"
-                // objectFit="cover"
               />
             </div>
-            {/* <div className="ml-4 text-left">
-              <div className="text-lg font-bold text-gray-900">1K+</div>
-              <div className="text-sm text-gray-600">Enrolled Learners</div>
-            </div>  */}
           </div>
         </motion.div>
         <motion.div
@@ -127,16 +118,16 @@ const AboutUsSection: React.FC = () => {
           </ul>
         </motion.div>
       </div>
-      <br></br>
-      <br></br>
-      <div className="flex gap-6 w-[80%]">
-        <div className="bg-slate-100  shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 hover:border-yellow-400">
+      <br />
+      <br />
+      <div className="flex flex-col md:flex-row gap-6 w-[80%]">
+        <div className="bg-slate-100 shadow-md text-gray-700 text-left justify-center p-5 w-full md:w-[60%] hover:border-4 hover:border-yellow-400">
           <h5 className="font-bold text-lg mb-2 flex items-center">
             Our Mission
             <Image
               src={Image3}
               alt="Mission Image"
-              width={50} 
+              width={50}
               height={50}
               className="ml-2 shadow:sm"
             />
@@ -149,9 +140,10 @@ const AboutUsSection: React.FC = () => {
             feedback and guidance from expert tutors.
           </p>
         </div>
-        <div className=" bg-slate-100 shadow-md text-gray-700 text-left justify-center p-5 w-[60%] hover:border-4 border-blue-400">
-          <h5 className="flex items-center font-bold text-lg mb-2">Our Vision
-          <Image
+        <div className="bg-slate-100 shadow-md text-gray-700 text-left justify-center p-5 w-full md:w-[60%] hover:border-4 border-blue-400">
+          <h5 className="flex items-center font-bold text-lg mb-2">
+            Our Vision
+            <Image
               src={Image4}
               alt="Mission Image"
               width={50}

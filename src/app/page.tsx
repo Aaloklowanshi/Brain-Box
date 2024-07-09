@@ -6,6 +6,7 @@ import HeroSection from "./herosection";
 import ServicesSection from "./servicesection";
 import ContactSection from "./contactsection";
 import "./globals.css"
+import ScrollToTopButton from "./scroll-to-top";
 import TestimonialsSection from "./testimonialsection";
 import Footer from "./footersectoin";
 import TutorsSection from "./tutorssection";
@@ -53,6 +54,7 @@ export default function Home() {
       </Head>
       <Topbar />
       <HeroSection />
+      
       <AboutUsSection/>
       <CourseSection/>
       <ServicesSection />
@@ -64,7 +66,13 @@ export default function Home() {
       <ContactSection />
       <Faqsection/>
       <Footer />
-      <WhatsAppIcon />
+      <div className="relative">
+        <div className="fixed bottom-6 right-6 z-50   "
+        >
+          <WhatsAppIcon/>
+        </div>
+      </div>
+      <ScrollToTopButton/>
 
     </>
   );

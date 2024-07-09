@@ -19,7 +19,7 @@ const Faqsection: React.FC = () => {
               How are the classes conducted?
             </AccordionTrigger>
             <AccordionContent className="text-xl text-gray-700 dark:text-gray-300">
-              Our classes are conducted one-on-one via Google Meet, ensuring personalized attention and a tailored learning experience.
+              Our classes are conducted one-on-one via Zoom Application, ensuring personalized attention and a tailored learning experience.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
